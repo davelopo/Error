@@ -1,0 +1,32 @@
+var xPositions = [72, 216, 349];
+var yPositions = [5, 43, 20];
+
+var randDrop = random(0, 400);
+
+
+for(var dropLimit = 0; dropLimit < xPositions.length; dropLimit++) {
+    xPositions.push(randDrop);
+    yPositions.push(randDrop);
+}
+
+draw = function() {
+    background(204, 247, 255);
+
+    for (var i = 0; i < xPositions.length; i++) {
+        noStroke();
+        fill(127, 119, 252);
+        ellipse(xPositions[i], yPositions[i], 10, 10);
+        yPositions[i] += 5;
+        
+        if (yPositions[i] > 400){
+            yPositions[i] = 0;
+        }
+    }
+};
+
+
+
+var mouseClicked = function(){
+    xPositions.push(mouseX);
+    yPositions.push(mouseY);
+};
