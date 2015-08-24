@@ -23,10 +23,3 @@ draw = function() {
         }
     }
 };
-
-
-
-var mouseClicked = function(){
-    xPositions.push(mouseX);
-    yPositions.push(mouseY);
-};
