@@ -1,0 +1,1 @@
+This is bad code that is run in KhanAcademy's ProcessingJS environment without being caught by the error checks.
